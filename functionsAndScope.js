@@ -30,7 +30,7 @@ while (time > 0) {
 console.log("Time is up!");
 
 // Print out the value of the "day" variable here using console.log(), and notice what happens in the console.
-//console.log(day);
+console.log(day); // no access since day is declared in block scope while we are accessing it in the global scope.
 
 // Exercise # 2 - Function Scope: What happens when you try to console log the value of "iceCreamFlavor" inside the "createIceCream" function vs outside of the function?
 let iceCreamFlavor = "Strawberry";
@@ -41,15 +41,17 @@ function createIceCream(iceCreamFlavor) {
 createIceCream("Matcha");
 // Print out the value of the "iceCreamFlavor" variable here using console.log(), and notice what happens in the console.
 
+console.log(iceCreamFlavor);
+
 // Exercise # 3 - Global Scope: What happens when you create a variable in global scope and change that variable's value inside of a function or block of code?
 let pasta = "Capellini";
 function changePasta() {
   pasta = "Linguini";
 }
-console.log(pasta);
+console.log(pasta); // Should log : Capellini since the function wasn't invoke
 changePasta();
 // What will the value of "pasta" be now? Print out the value of the "pasta" variable using console.log() and find out!
-console.log(pasta);
+console.log(pasta); // should log: Linguini since we invoke the function that changes the value of pasta
 
 /* Deliverable # 3:
  * Step 1 - Declare a function named "guacamoleMaker" that accepts a function as its parameter.
