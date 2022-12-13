@@ -3,7 +3,7 @@
 /*
  * Your code goes here
  */
-const sum = (num) => num + num;
+const sum = (num1, num2) => num1 + num2;
 
 // function sum(num) {
 //   return num + num;
@@ -15,7 +15,7 @@ const sum = (num) => num + num;
  * Your code goes here
  */
 
-console.log(sum(10));
+console.log(sum(10, 5));
 
 /* Exercise # 1 - Block Scope: The while loop as seen below contains a block of code.
  * A variable named "day" has been declared and assigned the value of "Monday" inside of this while loop.
